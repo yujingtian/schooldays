@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<!-- 
+	device-width:设备的宽度
+	initial-scale=1.0 缩放比例
+	user-scalable 0 1 / no yes 是否允许客户进行自行缩放
+    -->
+	<!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0" /> --><!-- 只有移动端可以识别 -->
+	<title>图片分割</title>
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="split.js"></script>
+    <style type="text/css">
+*{
+    margin: 0;
+    padding:0;
+}
+    </style>
+</head>
+<body>
+<div class="picSpilt" data-setting='{
+    "picWidth":800,
+    "picHeight":500,
+    "url":"timg.jpg",
+    "parts":25
+}'>
+</div>
+
+<script type="text/javascript">
+    Split.init($('.picSpilt'));
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+var tankeobj=function(){
+	this.x=3*canvas.width/4;
+	this.y=3*canvas.height/4;
+	this.angle=0;
+	this.speed=5;
+	this.life=5;
+}
+tankeobj.prototype.drawtanke=function(context){
+	context.save();
+	context.translate(this.x,this.y);
+	context.rotate(this.angle);
+	context.beginPath();	
+	context.moveTo(2,-20);
+	context.lineTo(20,-20);
+	context.lineTo(20,20);
+	context.lineTo(-20,20);
+	context.lineTo(-20,-20);
+	context.lineTo(-2,-20);
+	context.lineTo(-2,-30);
+	context.lineTo(2,-30);
+	context.lineTo(2,-10);
+	context.lineTo(10,-10);
+	context.lineTo(10,10);
+	context.lineTo(-10,10);
+	context.lineTo(-10,-10);
+	context.lineTo(-2,-10);
+	context.lineTo(-2,-20);
+	context.stroke();
+	context.restore();
+}

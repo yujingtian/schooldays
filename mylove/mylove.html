@@ -1,0 +1,97 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>boring</title> 
+<audio src="music/battle.mp3" id="music" autoplay=""  loop="true"></audio>
+	<style type="text/css">
+		html,body,p{
+			margin:0;
+			padding:0;
+		}
+		.play:target{
+			background-color: red;
+		}
+		.allbg{
+			position:relative;
+			width:600px;
+			height:600px;
+			margin:0 auto;
+		}
+		#bg{
+			position: absolute;
+			width:600px;
+			height:600px;
+			border:1px solid #ccc;
+		}
+		#start{
+			position: absolute;
+			width:600px;
+			height:600px;
+			opacity: 1;
+			border:1px solid #ccc;
+			background: #ccc;
+			-webkit-transition:all 1s;
+		}
+		.text{
+			position: absolute;
+			top:450px;
+			left:250px;
+			margin: 0 auto;
+			font-family:"Brush Script Std";
+			font-size:65;
+			-webkit-transition:all 0.5s;
+		}
+		.play{
+			cursor: pointer;
+		}
+		 .text:hover {
+		 	top:433px;
+		 	left: 233px;
+			font-size:100;
+		}
+		.introduce{
+			width:600px;
+			height:150px;
+			margin: 0 auto;
+			border:1px solid #ccc;
+		}
+		.info{
+			margin-left: 50px;
+			line-height: 25px;
+		}
+	</style>
+
+   
+</head>
+<body>
+	<div class="allbg">
+		<div id="bg"><canvas id="canvas" width="600" height="600"></canvas></div>
+		<div id="start">
+			<div class="text"><p  class="play" type="button" onclick="change()">play</p></div>
+		</div>
+		<div id="test" style="width:100px; height:100px;"></div>
+	</div>
+	<div class="introduce">
+		<h3 style="text-align: center;">游戏规则</h3>
+		<p class="info">(1)玩家一: 上(↑) 下(↓) 左(←) 右(→) 攻击(/)</p>
+		<p class="info">(2)玩家二: 上(w) 下(s) 左(a) 右(d) 攻击(f)</p>
+		<p class="info">(3)快 叫 上 你 的 小 伙 伴 来 一 场 激 情 的 对 决 吧！figthing</p>
+	</div>
+	
+	<script type="text/javascript" src="js/tanke.js"></script>
+	<script type="text/javascript" src="js/tanke2.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/pangzhuang.js"></script>
+	<script type="text/javascript" src="js/bullet.js"></script>
+	<script type="text/javascript" src="js/bullet2.js"></script>
+	<script type="text/javascript" src="js/date.js"></script>
+	<script type="text/javascript">
+	function change(){
+		var opacity=document.getElementById("start");
+		opacity.style.opacity=0;
+		game2=true;
+		game1=true;
+	}
+	</script>
+</body>
+</html>

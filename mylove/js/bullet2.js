@@ -1,0 +1,92 @@
+var bullet2obj=function(){
+	this.x=[];
+	this.y=[];
+	this.speed=[];
+	this.radius=[];
+	this.alive=[];
+	this.timer=0;
+	this.flag=[];
+	this.zhong=[];
+}
+bullet2obj.prototype.num=100;
+bullet2obj.prototype.init=function(){
+	for(var i=0;i<100;i++)
+	{
+		this.x[i]=tanke2.x;
+		this.y[i]=tanke2.y;
+		this.speed[i]=10;
+		this.radius[i]=5;
+		this.alive[i]=false;
+		this.flag[i]="topp";
+		this.zhong[i]=false;
+	}
+}
+bullet2obj.prototype.dead=function(){
+	this.alive[i]=false;
+}
+bullet2obj.prototype.draw=function(context){
+	this.timer+=deltatime;
+	for(var i=0;i<100;i++)
+	{	
+		
+		  if(this.alive[i]==true)
+		   {
+		  	if(this.flag[i]=="topp")
+		   	{
+		   		context.save();
+		   		this.y[i]-=this.speed[i];
+				context.translate(this.x[i],this.y[i]-30);
+			    context.beginPath();
+				context.arc(0,0,this.radius[i],0,2*Math.PI,false);
+				context.fill();
+				context.closePath();
+				context.restore();
+		   	}
+		   	   	if(this.flag[i]=="left")
+		   	{
+		   		context.save();	
+		   		this.x[i]-=this.speed[i];
+				context.translate(this.x[i]-30,this.y[i]);
+			    context.beginPath();
+				context.arc(0,0,this.radius[i],0,2*Math.PI,false);
+				context.fill();
+				context.closePath();
+				context.restore();
+		   	}
+		   	   	if(this.flag[i]=="right")
+		   	{
+		   		context.save();
+		   		this.x[i]+=this.speed[i];
+				context.translate(this.x[i]+30,this.y[i]);
+			    context.beginPath();
+				context.arc(0,0,this.radius[i],0,2*Math.PI,false);
+				context.fill();
+				context.closePath();
+				context.restore();
+		   	}
+		   	   	if(this.flag[i]=="bottom")
+		   	{
+		   		context.save();
+		   		this.y[i]+=this.speed[i];
+				context.translate(this.x[i],this.y[i]+30);
+			    context.beginPath();
+				context.arc(0,0,this.radius[i],0,2*Math.PI,false);
+				context.fill();
+				context.closePath();
+				context.restore();
+		   	}
+		   	}
+		   if(this.timer>200&&shoot2==true&&this.alive[i]==false)
+			{
+				count2--;
+				this.flag[i]=fig2;
+				this.alive[i]=true;
+				this.timer=0;
+				this.x[i]=tanke2.x;
+				this.y[i]=tanke2.y;
+				break;
+			}   
+	}
+	
+ 
+}

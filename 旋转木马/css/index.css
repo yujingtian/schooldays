@@ -1,0 +1,14 @@
+*{
+	margin:0;
+	padding:0;
+}
+ol,ul{
+	list-style: none;
+}
+.poster-main{position:relative;width:800px;height: 270px;}
+.poster-main a,.poster-main img{display: block;}
+.poster-main .poster-list{width:800px;height:270px;}
+.poster-main .poster-button{position:absolute;width:100px;height: 270px;top:0;cursor: pointer;}
+.poster-main .poster-prev-button{left:0;z-index: 10;background: url(../imagesucai/btn_l.png) no-repeat center center;}
+.poster-main .poster-next-button{right:0;background: url(../imagesucai/btn_r.png) no-repeat center center;}
+.poster-main .poster-list .poster-item{position: absolute;left: 0;top:0;}
